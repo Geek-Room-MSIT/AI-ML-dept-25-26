@@ -1,0 +1,26 @@
+# 3.py
+import random
+
+map_ = ["_", "_", "_", "_", "_"]  # Avoided 'map' since it's built-in
+treasure = random.randint(0, 4)
+
+found = False
+
+print("Initial map:", map_)  # Starting view
+
+while not found:
+    guess = int(input("Guess the position (1-5): ")) - 1  # Convert to 0-index
+    
+    if guess == treasure:
+        found = True
+        map_[guess] = "T"
+        print("Current map:", map_)
+        print("You found the treasure! 🏆")
+    else:
+        if guess < treasure:
+            print("Too left!")
+        else:
+            print("Too right!")
+        
+        map_[guess] = "O"  # Mark as tried
+        print("Current map:", map_)
