@@ -1,0 +1,37 @@
+import random
+
+characters = ["a sleepy panda", "an alien", "a pirate", "a robot", "a hacker", "a time traveler"]
+places = ["in the jungle", "on Mars", "at a tech fest", "in the library", "inside a video game", "at a secret lab"]
+objects = ["a laptop", "a treasure map", "a sandwich", "a phone", "a mysterious USB", "a broken drone"]
+actions = ["started coding", "fell asleep", "built a rocket", "lost their WiFi", "hacked the system", "ordered pizza"]
+twists = [
+    "but suddenly, the lights flickered and everything froze!",
+    "and out of nowhere, a mysterious voice whispered, 'Access Denied!'",
+    "when unexpectedly, an error popped up saying 'Mission Failed!'",
+    "but then, a portal opened and they were sucked inside!",
+    "when a wild cat jumped on the keyboard and broke everything!"
+]
+endings = [
+    "In the end, they laughed and continued their adventure.",
+    "Surprisingly, everything turned out fine and they became legends!",
+    "And that's how a new meme was born on the internet.",
+    "They posted it on Instagram and got 1 million likes!",
+    "And then they realized... it was all just a dream."
+]
+
+n= int(input("How many long stories do you want? "))
+
+print("\n📖 Generating Epic Funny Stories...\n")
+
+for i in range(n):
+    char = random.choice(characters)
+    place = random.choice(places)
+    obj = random.choice(objects)
+    act = random.choice(actions)
+    twist = random.choice(twists)
+    ending = random.choice(endings)
+
+    print(f"🎬 Story {i+1}:")
+    print(f"Once upon a time, {char} found {obj} {place} and {act}.")
+    print(f"{twist}")
+    print(f"{ending}\n")
