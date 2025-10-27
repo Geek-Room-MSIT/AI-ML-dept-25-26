@@ -1,0 +1,13 @@
+# Trend Tracker 
+trend=[30, 31, 33, 34, 35]
+for i in trend:
+    a=trend[-1]-trend[-2]
+prev_number=trend[-1]
+next_number=prev_number+a
+if a>0:
+    print("the trend is increasing ")
+if a<0:
+    print("the trend is decreasing")
+if a==0:
+    print("the trend is staying same")
+print(f"the next member is {next_number}")
