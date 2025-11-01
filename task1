@@ -1,0 +1,22 @@
+sentence=input("Enter the sentence with emojis:")
+sentence.lower()
+mood_dict={"love":1,"happy":1,"😍":1,"joy":1,"great":1,"😊":1,"good":1,"nice":1,"wow":1,"amazing":1,"cool":1,"😎":1,"😁":1,"🎉":1,"🤩":1,
+           "sad":-1,"bad":-1,"angry":-1,"hate":-1,"worst":-1,"😫":-1,"😞":-1,"pain":-1,"boring":-1,"upset":-1,"terrible":-1,"annoyed":-1,"😡":-1,"😭":-1,"😢":-1}
+positive=0
+negative=0
+for word,value in mood_dict.items():
+    if word in sentence:
+        if value==1:
+            positive+=1
+        elif value==-1:
+            negative+=1
+
+if positive>negative:
+    print("Overall Mood : Positive 😊")
+elif positive<negative:
+    print("Overall Mood : Negative 😞")
+else:
+    print("Overall Mood : Neutral 😐")
+    
+    
+    
